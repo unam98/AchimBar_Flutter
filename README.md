@@ -1,16 +1,8 @@
-# sds_new
+# SDS_Project
 
-A new Flutter project.
+classification model을 개발해서 flutter로 구현한 프로젝트입니다.
 
-## Getting Started
+## 주요 기능
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 카테고리 추천
+- 유사 제품 추천
