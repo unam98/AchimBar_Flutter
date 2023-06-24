@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 
 class RecommendController extends GetxController {
-
   RxList defaultList = [].obs;
 
   firebaseList(index) {

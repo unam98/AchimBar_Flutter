@@ -11,6 +11,7 @@ class CustomBigButton extends StatelessWidget {
   final String label;
   final route;
   final color;
+
   CustomBigButton(this.label, this.color, this.route);
 
   @override
@@ -37,6 +38,7 @@ class CustomOffButton extends StatelessWidget {
   final String label;
   final route;
   final color;
+
   CustomOffButton(this.label, this.color, this.route);
 
   @override

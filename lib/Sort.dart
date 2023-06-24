@@ -2,9 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:sds_new/Custom/CustomColor.dart';
 import 'package:sds_new/Controller/bottom_nav_controller.dart';
 import 'package:sds_new/Controller/url_controller.dart';
+import 'package:sds_new/Custom/CustomColor.dart';
+
 import 'Controller/model_controller.dart';
 import 'Controller/recommend_controller.dart';
 
@@ -98,8 +99,9 @@ class Sort extends GetView<BottomNavContoroller> {
                       Text(
                         "${modelController.modelReturn()}",
                         style: TextStyle(
-                            fontSize: 20.sp, fontFamily: "SpoqaHanSansNeo",
-                        fontWeight: FontWeight.bold),
+                            fontSize: 20.sp,
+                            fontFamily: "SpoqaHanSansNeo",
+                            fontWeight: FontWeight.bold),
                       ),
                       Expanded(
                         child: Padding(
@@ -121,7 +123,8 @@ class Sort extends GetView<BottomNavContoroller> {
                                     child: Row(
                                       children: [
                                         ClipRRect(
-                                          borderRadius: BorderRadius.circular(20),
+                                          borderRadius:
+                                              BorderRadius.circular(20),
                                           child: Image.network(
                                             docs[index]['url_image'],
                                             errorBuilder: (context, exception,
@@ -130,7 +133,8 @@ class Sort extends GetView<BottomNavContoroller> {
                                               color: customGray,
                                               width: 100,
                                               height: 100,
-                                              child: Center(child: Text("품절입니다")),
+                                              child:
+                                                  Center(child: Text("품절입니다")),
                                             ),
                                             width: 100,
                                             height: 100,
@@ -155,6 +159,7 @@ class Sort extends GetView<BottomNavContoroller> {
                                                   "용량 : ${docs[index]['weight'].floor().toString()}g, 칼로리 : ${docs[index]['kcal'].floor().toString()}kcal",
                                                 ),
                                                 SizedBox(height: 6),
+
                                                 ///BottomSheet
                                                 Container(
                                                   child: Row(
@@ -162,16 +167,18 @@ class Sort extends GetView<BottomNavContoroller> {
                                                       OutlinedButton(
                                                         onPressed: () {
                                                           recommendController
-                                                              .firebaseList(index);
+                                                              .firebaseList(
+                                                                  index);
                                                           showModalBottomSheet(
                                                               constraints:
                                                                   BoxConstraints(
-                                                                      maxHeight:
-                                                                          370.h),
+                                                                      maxHeight: 370
+                                                                          .h),
                                                               enableDrag: false,
                                                               context: context,
                                                               //여기 context 뭘로 해야 되는지 모르겠어. 어떻게 쓰이는 건지,,,
-                                                              builder: (context) {
+                                                              builder:
+                                                                  (context) {
                                                                 return StreamBuilder(
                                                                     stream: FirebaseFirestore
                                                                         .instance
@@ -179,14 +186,12 @@ class Sort extends GetView<BottomNavContoroller> {
                                                                             'data')
                                                                         .where(
                                                                             'index',
-                                                                            whereIn:
-                                                                                recommendController
-                                                                                    .defaultList)
+                                                                            whereIn: recommendController
+                                                                                .defaultList)
                                                                         .snapshots(),
                                                                     builder: (BuildContext
                                                                             context2,
-                                                                        AsyncSnapshot<
-                                                                                QuerySnapshot<Map<String, dynamic>>>
+                                                                        AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>>
                                                                             snapshot) {
                                                                       if (snapshot
                                                                               .connectionState ==
@@ -197,30 +202,28 @@ class Sort extends GetView<BottomNavContoroller> {
                                                                               CircularProgressIndicator(),
                                                                         );
                                                                       }
-                                                                      final docs =
-                                                                          snapshot
-                                                                              .data!
-                                                                              .docs;
+                                                                      final docs = snapshot
+                                                                          .data!
+                                                                          .docs;
                                                                       // listView하고 별개인 Column 이게 있어야 닫기 버튼 가능
                                                                       return Padding(
-                                                                        padding:
-                                                                            const EdgeInsets.only(left: 20,right: 20,bottom: 20
-                                                                                ),
+                                                                        padding: const EdgeInsets.only(
+                                                                            left:
+                                                                                20,
+                                                                            right:
+                                                                                20,
+                                                                            bottom:
+                                                                                20),
                                                                         child:
                                                                             Column(
                                                                           mainAxisAlignment:
-                                                                              MainAxisAlignment
-                                                                                  .start,
-                                                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                                                              MainAxisAlignment.start,
+                                                                          crossAxisAlignment:
+                                                                              CrossAxisAlignment.start,
                                                                           children: [
                                                                             Padding(
                                                                               padding: const EdgeInsets.only(bottom: 16, top: 12),
-                                                                              child: Text(
-                                                                                  "유사 제품 추천 목록",
-                                                                                  style: TextStyle(
-                                                                                      fontSize: 18.sp,
-                                                                                      fontWeight: FontWeight.bold,
-                                                                                      overflow: TextOverflow.ellipsis)),
+                                                                              child: Text("유사 제품 추천 목록", style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold, overflow: TextOverflow.ellipsis)),
                                                                             ),
                                                                             Expanded(
                                                                               child: ListView.builder(
@@ -255,12 +258,7 @@ class Sort extends GetView<BottomNavContoroller> {
                                                                                               child: Column(children: [
                                                                                                 Text(
                                                                                                   docs[index2]['title'],
-                                                                                                  style : TextStyle(
-                                                                                                      fontWeight:
-                                                                                                      FontWeight.bold,
-                                                                                                      fontSize: 14.sp,
-                                                                                                      overflow: TextOverflow
-                                                                                                          .ellipsis),
+                                                                                                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.sp, overflow: TextOverflow.ellipsis),
                                                                                                   overflow: TextOverflow.ellipsis,
                                                                                                 ),
                                                                                                 Text(
@@ -291,21 +289,15 @@ class Sort extends GetView<BottomNavContoroller> {
                                                                             ),
                                                                             Center(
                                                                               child: ElevatedButton(
-                                                                                  onPressed:
-                                                                                      () {
+                                                                                  onPressed: () {
                                                                                     recommendController.removeList();
                                                                                     Get.back();
                                                                                   },
-                                                                                  child:
-                                                                                      Text(
+                                                                                  child: Text(
                                                                                     "닫기",
                                                                                     style: TextStyle(color: customBlack, fontSize: 18.sp),
                                                                                   ),
-                                                                                  style: ElevatedButton.styleFrom(
-                                                                                      primary: customYellow,
-                                                                                      elevation: 0,
-                                                                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(15))),
-                                                                                      minimumSize: Size(300.w, 50.h))),
+                                                                                  style: ElevatedButton.styleFrom(primary: customYellow, elevation: 0, shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(15))), minimumSize: Size(300.w, 50.h))),
                                                                             ),
                                                                           ],
                                                                         ),
@@ -317,8 +309,8 @@ class Sort extends GetView<BottomNavContoroller> {
                                                                       topLeft: Radius
                                                                           .circular(
                                                                               20),
-                                                                      topRight: Radius
-                                                                          .circular(
+                                                                      topRight:
+                                                                          Radius.circular(
                                                                               20))));
                                                         },
                                                         child: Text("유사 추천",
@@ -329,40 +321,43 @@ class Sort extends GetView<BottomNavContoroller> {
                                                             minimumSize:
                                                                 Size(100, 34.7),
                                                             side: BorderSide(
-                                                                color: customPurple,
+                                                                color:
+                                                                    customPurple,
                                                                 width: 2),
                                                             shape: RoundedRectangleBorder(
-                                                                borderRadius:
-                                                                    BorderRadius.all(
-                                                                        Radius.circular(
+                                                                borderRadius: BorderRadius
+                                                                    .all(Radius
+                                                                        .circular(
                                                                             15)))),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsets.only(
-                                                                left: 6),
+                                                            const EdgeInsets
+                                                                .only(left: 6),
                                                         child: Flexible(
                                                           child: ElevatedButton(
                                                             onPressed: () {
                                                               urlCheck.launchURL(
-                                                                  docs[index]['url']);
+                                                                  docs[index]
+                                                                      ['url']);
                                                             },
                                                             child: Text(
                                                               "자세히 보기",
                                                               style: TextStyle(
-                                                                  color:
-                                                                      Colors.black),
+                                                                  color: Colors
+                                                                      .black),
                                                             ),
                                                             style: ElevatedButton.styleFrom(
                                                                 elevation: 0,
-                                                                primary: customPurple,
+                                                                primary:
+                                                                    customPurple,
                                                                 shape: RoundedRectangleBorder(
-                                                                    borderRadius: BorderRadius
-                                                                        .all(Radius
-                                                                            .circular(
-                                                                                15))),
+                                                                    borderRadius:
+                                                                        BorderRadius.all(Radius.circular(
+                                                                            15))),
                                                                 minimumSize:
-                                                                    Size(100, 34.7)),
+                                                                    Size(100,
+                                                                        34.7)),
                                                           ),
                                                         ),
                                                       ),
@@ -370,7 +365,9 @@ class Sort extends GetView<BottomNavContoroller> {
                                                   ),
                                                 )
                                               ],
-                                            crossAxisAlignment: CrossAxisAlignment.start,),
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                            ),
                                           ),
                                         )
                                       ],

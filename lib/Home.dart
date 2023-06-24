@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:sds_new/Custom/CustomWidget.dart';
-import 'package:sds_new/Custom/CustomColor.dart';
 import 'package:sds_new/Controller/bottom_nav_controller.dart';
+import 'package:sds_new/Custom/CustomColor.dart';
+import 'package:sds_new/Custom/CustomWidget.dart';
+
 import 'Controller/model_controller.dart';
 import 'Result.dart';
 
@@ -79,7 +80,8 @@ class Home extends GetView<BottomNavContoroller> {
               // _widgetOptions.elementAt(_selectedIndex), //인덱스에 해당하는 배열 요소값 출력
               Text(
                 "안녕하세요 김우남님!\n어울리는 아침을 찾아드릴게요",
-                style: TextStyle(fontSize: 20.sp, fontFamily: "SpoqaHanSansNeo"),
+                style:
+                    TextStyle(fontSize: 20.sp, fontFamily: "SpoqaHanSansNeo"),
               ),
               SizedBox(height: 30.h),
               WeightSlider("용량", 20, 1400, 1400),

@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:sds_new/Custom/CustomWidget.dart';
-import 'package:sds_new/Custom/CustomColor.dart';
-import 'package:sds_new/Sort.dart';
 import 'package:sds_new/Controller/bottom_nav_controller.dart';
-import 'Controller/model_controller.dart';
+import 'package:sds_new/Custom/CustomColor.dart';
+import 'package:sds_new/Custom/CustomWidget.dart';
+import 'package:sds_new/Sort.dart';
 
+import 'Controller/model_controller.dart';
 
 class Result extends GetView<BottomNavContoroller> {
   Result({Key? key}) : super(key: key);
 
   final ModelController modelController = Get.find();
-
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +29,7 @@ class Result extends GetView<BottomNavContoroller> {
               title: Text(
                 'Result',
                 style: TextStyle(
-                    fontFamily: "NotoSans",
-                    fontSize: 17,
-                    color: Colors.black),
+                    fontFamily: "NotoSans", fontSize: 17, color: Colors.black),
               ),
               centerTitle: true,
               actions: [
@@ -118,14 +115,12 @@ class Result extends GetView<BottomNavContoroller> {
                   Padding(
                     padding: const EdgeInsets.only(top: 26),
                     child: Center(
-                      child:
-                                Image.asset(
-                                  '${modelController.modelImage()}',
-                                  width: 140.w,
-                                  height: 140.h,
-                                )),
+                        child: Image.asset(
+                      '${modelController.modelImage()}',
+                      width: 140.w,
+                      height: 140.h,
+                    )),
                   ),
-
 
                   // Center(
                   //   child: CircleAvatar(
@@ -160,7 +155,8 @@ class Result extends GetView<BottomNavContoroller> {
                                     // color: Color(0xffdd95ef),
                                     decoration: BoxDecoration(
                                         color: Color(0xffe4e4e4),
-                                        borderRadius: BorderRadius.circular(15)),
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
                                   ),
                                   Positioned(
                                       child: Image.asset(
@@ -168,9 +164,10 @@ class Result extends GetView<BottomNavContoroller> {
                                     width: 50.w,
                                   ))
                                 ]),
-                            Text("건강", style: TextStyle(
-                              fontSize: 16
-                            ),)
+                            Text(
+                              "건강",
+                              style: TextStyle(fontSize: 16),
+                            )
                           ],
                         ),
                         Column(
@@ -184,7 +181,8 @@ class Result extends GetView<BottomNavContoroller> {
                                     // color: Color(0xffdd95ef),
                                     decoration: BoxDecoration(
                                         color: Color(0xffe4e4e4),
-                                        borderRadius: BorderRadius.circular(15)),
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
                                   ),
                                   Positioned(
                                       child: Image.asset(
@@ -192,9 +190,7 @@ class Result extends GetView<BottomNavContoroller> {
                                     width: 50.w,
                                   ))
                                 ]),
-                            Text("피로감소", style: TextStyle(
-                                fontSize: 16
-                            ))
+                            Text("피로감소", style: TextStyle(fontSize: 16))
                           ],
                         ),
                         Column(
@@ -208,7 +204,8 @@ class Result extends GetView<BottomNavContoroller> {
                                     // color: Color(0xffdd95ef),
                                     decoration: BoxDecoration(
                                         color: Color(0xffe4e4e4),
-                                        borderRadius: BorderRadius.circular(15)),
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
                                   ),
                                   Positioned(
                                       child: Image.asset(
@@ -216,9 +213,7 @@ class Result extends GetView<BottomNavContoroller> {
                                     width: 50.w,
                                   ))
                                 ]),
-                            Text("비만예방", style: TextStyle(
-                                fontSize: 16
-                            ))
+                            Text("비만예방", style: TextStyle(fontSize: 16))
                           ],
                         ),
                       ]),

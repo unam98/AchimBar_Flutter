@@ -7,7 +7,6 @@ class ModelController extends GetxController {
   RxDouble kcal = 0.0.obs;
   RxString imageValue = "image/fried-rice.png".obs;
 
-
   String modelReturn() {
     if (weight <= 254.5) {
       if (weight <= 201.5) {

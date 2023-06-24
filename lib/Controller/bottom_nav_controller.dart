@@ -1,10 +1,8 @@
 import 'package:get/get.dart';
 import 'package:sds_new/Home.dart';
-import 'package:sds_new/LikePage.dart';
 
 import '../Category.dart';
 import '../Setting.dart';
-import '../Sort.dart';
 
 enum PageName { HISTORY, HOME, SETTING }
 

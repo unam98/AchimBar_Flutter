@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:sds_new/Controller/bottom_nav_controller.dart';
 import 'package:sds_new/Sort.dart';
+
 import 'Controller/model_controller.dart';
 
 class Category extends GetView<BottomNavContoroller> {
@@ -75,11 +75,11 @@ class Category extends GetView<BottomNavContoroller> {
               children: [
                 ListTile(
                   leading: CircleAvatar(
-                    child: ClipRRect(
-                      child: Image.asset('image/cereal.png'),
-                      borderRadius: BorderRadius.circular(50.0),
-                    ),
-                backgroundColor: Colors.white),
+                      child: ClipRRect(
+                        child: Image.asset('image/cereal.png'),
+                        borderRadius: BorderRadius.circular(50.0),
+                      ),
+                      backgroundColor: Colors.white),
                   title: Text("cereal"),
                   trailing: Icon(Icons.keyboard_arrow_right_outlined),
                   onTap: () {
@@ -92,11 +92,11 @@ class Category extends GetView<BottomNavContoroller> {
                 ),
                 ListTile(
                   leading: CircleAvatar(
-                    // radius: 16.0,
-                    child: ClipRRect(
-                      child: Image.asset('image/fastfood.png'),
-                      borderRadius: BorderRadius.circular(50.0),
-                    ),
+                      // radius: 16.0,
+                      child: ClipRRect(
+                        child: Image.asset('image/fastfood.png'),
+                        borderRadius: BorderRadius.circular(50.0),
+                      ),
                       backgroundColor: Colors.white),
                   title: Text("fastfood"),
                   trailing: Icon(Icons.keyboard_arrow_right_outlined),
@@ -110,11 +110,11 @@ class Category extends GetView<BottomNavContoroller> {
                 ),
                 ListTile(
                   leading: CircleAvatar(
-                    // radius: 16.0,
-                    child: ClipRRect(
-                      child: Image.asset('image/fried-rice.png'),
-                      borderRadius: BorderRadius.circular(50.0),
-                    ),
+                      // radius: 16.0,
+                      child: ClipRRect(
+                        child: Image.asset('image/fried-rice.png'),
+                        borderRadius: BorderRadius.circular(50.0),
+                      ),
                       backgroundColor: Colors.white),
                   title: Text("rice"),
                   trailing: Icon(Icons.keyboard_arrow_right_outlined),
@@ -128,11 +128,11 @@ class Category extends GetView<BottomNavContoroller> {
                 ),
                 ListTile(
                   leading: CircleAvatar(
-                    // radius: 16.0,
-                    child: ClipRRect(
-                      child: Image.asset('image/salad.png'),
-                      borderRadius: BorderRadius.circular(50.0),
-                    ),
+                      // radius: 16.0,
+                      child: ClipRRect(
+                        child: Image.asset('image/salad.png'),
+                        borderRadius: BorderRadius.circular(50.0),
+                      ),
                       backgroundColor: Colors.white),
                   title: Text("salad"),
                   trailing: Icon(Icons.keyboard_arrow_right_outlined),
@@ -146,11 +146,11 @@ class Category extends GetView<BottomNavContoroller> {
                 ),
                 ListTile(
                   leading: CircleAvatar(
-                    // radius: 16.0,
-                    child: ClipRRect(
-                      child: Image.asset('image/water.png'),
-                      borderRadius: BorderRadius.circular(50.0),
-                    ),
+                      // radius: 16.0,
+                      child: ClipRRect(
+                        child: Image.asset('image/water.png'),
+                        borderRadius: BorderRadius.circular(50.0),
+                      ),
                       backgroundColor: Colors.white),
                   title: Text("water"),
                   trailing: Icon(Icons.keyboard_arrow_right_outlined),
@@ -162,11 +162,9 @@ class Category extends GetView<BottomNavContoroller> {
                     Get.to(Sort());
                   },
                 )
-
               ],
             ),
-          )
-          )),
+          ))),
     );
   }
 }

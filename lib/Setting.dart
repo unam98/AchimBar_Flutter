@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:sds_new/Custom/CustomWidget.dart';
-import 'package:sds_new/Custom/CustomColor.dart';
-import 'package:sds_new/Sort.dart';
 import 'package:sds_new/Controller/bottom_nav_controller.dart';
+import 'package:sds_new/Custom/CustomColor.dart';
+
 import 'Controller/model_controller.dart';
 
 class Setting extends GetView<BottomNavContoroller> {
@@ -82,7 +80,9 @@ class Setting extends GetView<BottomNavContoroller> {
                   Text(
                     'dnska6657@naver.com',
                     style: TextStyle(
-                        fontFamily: "NotoSans", fontSize: 17, color: customBlack),
+                        fontFamily: "NotoSans",
+                        fontSize: 17,
+                        color: customBlack),
                   ),
                 ],
               ),
