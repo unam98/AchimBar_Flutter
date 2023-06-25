@@ -8,7 +8,7 @@
 ## Contributors 💛
 | [@unam98](https://github.com/unam98) | 김익환 |
 | :---: | :---: |
-|<img width="400" src="https://github.com/Runnect/Runnect-Android/assets/89737271/58992dce-d7b6-4e33-9d9c-279d5a3a0ef1.jpg">|<img width="400" src="https://github.com/Runnect/Runnect-Android/assets/89737271/29aa0044-0653-4573-9957-ddd46090a7fc.jpg">|
+|<img width="400" src="https://github.com/Runnect/Runnect-Android/assets/89737271/58992dce-d7b6-4e33-9d9c-279d5a3a0ef1.jpg">|<img width="400" src="https://github.com/unam98/AchimBar_Flutter/assets/89737271/fd9c28a4-85d0-4be2-8d56-a872b146a768.jpg">|
 |**앱 개발 전담**|**ML 모델 개발 전담**|
 
 <br>
